@@ -43,7 +43,7 @@ contract LeniiToken {
     
     function faucet(address _recipient, uint256 _amount) external payable {
         require(_amount <= 100, "Amount must be less than or equal to 100");
-        require(msg.value >= _amount * 1 ether, "Insufficient ether sent");
+        require(msg.value >= _amount * 1 ether, "Insufficient etheeer sent");
         balanceOf[_recipient] += _amount;
         emit Transfer(address(this), _recipient, _amount);
     }
